@@ -162,4 +162,4 @@ The data also corrected me. I expected to confirm the joke, but the real pattern
 
 ---
 
-Georgia J Summers · Junior Data Analyst · [GitHub](https://github.com/georgiajayy) · LinkedIn · [YouTube](https://www.youtube.com/@datawithgeorgiajayy)
+[GitHub](https://github.com/georgiajayy) 
