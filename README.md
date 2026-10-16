@@ -30,13 +30,11 @@ I also wanted to build something more than a dashboard. A game lets people test 
 
 ### 1. The joke is mostly a myth
 
-![First named victim, one square per film](chart_first_victim.png)
 
 Before *Get Out*, the first named victim was Black in only 3 of 14 films: *The Shining*, *Candyman* and *Scream 2*. Two of those are among the most famous horror films ever made, which may be why the joke feels so true.
 
 ### 2. The real pattern was survival, not dying first
 
-![Black main characters, one dot each](chart_survival.png)
 
 Dying first was rare, but surviving was rarer. Before 2017, only 9 of the 22 Black main characters whose fate is clear made it to the end. They tended to be the sidekick, the soldier or the helper, who die saving someone else. After *Get Out*, 26 of 35 survived.
 
@@ -56,7 +54,6 @@ The game has three parts:
 2. **The film:** three scenes in a cabin. Pick who dies first, who dies next and who makes it out.
 3. **The reveal:** your film compared with the real films. Tap any square or dot to see the character, the actor and their fate. Then there's a short history of Black horror in five eras, an analysis of the numbers and a watchlist.
 
-![The casting screen](screenshot_casting.png)
 
 ## Data and methods
 
