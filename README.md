@@ -160,6 +160,3 @@ The data also corrected me. I expected to confirm the joke, but the real pattern
 - The photographers on Wikimedia Commons whose freely licensed photos appear in the game
 - Fonts: UnifrakturMaguntia, Alegreya, Alfa Slab One and Courier Prime, all under the SIL Open Font License
 
----
-
-[GitHub](https://github.com/georgiajayy) 
