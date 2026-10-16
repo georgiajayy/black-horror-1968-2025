@@ -1,5 +1,7 @@
 # Who Dies First? Black Characters in Horror, 1968–2025 🔪
 
+[I will upload images soon!]
+
 An interactive horror game and data story about one of cinema's oldest jokes: *the Black character always dies first.* Players cast their own horror film, decide who dies, and then see how their choices compare with what 27 real horror films actually did.
 
 🔗 **[Play the game](https://georgiajayy.github.io/black-horror-1968-2025/)**
