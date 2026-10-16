@@ -59,6 +59,12 @@ The game has three parts:
 
 ![The casting screen](screenshot_casting.png)
 
+![A scene from the film: choosing who dies next](screenshot_scene.png)
+
+![The reveal: your film compared with the real films](screenshot_your_film.png)
+
+![From the history of Black horror](screenshot_history.png)
+
 ## Data and methods
 
 **Films:** 27 well-known horror films with Black characters in the main cast, 15 from before *Get Out* (1968–2007) and 12 from after (2017–2025).
@@ -113,6 +119,9 @@ black-horror-1968-2025/
 │   └── logo.png                # My logo
 ├── screenshot_title.png        # Title screen
 ├── screenshot_casting.png      # Casting screen
+├── screenshot_scene.png        # A death scene
+├── screenshot_your_film.png    # The reveal
+├── screenshot_history.png      # The history section
 ├── chart_first_victim.png      # First victim chart
 ├── chart_survival.png          # Survival chart
 └── README.md                   # You are here
