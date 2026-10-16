@@ -6,7 +6,6 @@ An interactive horror game and data story about one of cinema's oldest jokes: *t
 
 ✅ **Status:** Live. Made for Black History Month, October 2026.
 
-![Who Dies First? title screen](screenshot_title.png)
 
 ## About the project
 
