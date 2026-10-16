@@ -61,8 +61,8 @@ button{font:inherit;cursor:pointer}
 @media (max-width:820px){.hero{grid-template-columns:1fr;gap:36px}}
 .hero .lede{font-size:21px;margin:0 0 30px}
 .frame{border:2px solid var(--fg);padding:6px;margin:0}
-.frame .inner{background:var(--bg);display:grid;grid-template-columns:repeat(3,1fr);gap:0}
-.frame img{display:block;width:100%;height:auto;aspect-ratio:300/420;object-fit:contain;padding:6px}
+.frame .inner{background:var(--paper);display:grid;grid-template-columns:repeat(3,1fr);gap:0}
+.frame .skel{display:block;width:100%;height:auto;border:1.5px solid #000}
 .frame figcaption{font-family:var(--type);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);padding:10px 4px 2px}
 .meta{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;border-top:2px solid var(--fg);border-bottom:1px solid var(--line);margin:48px 0 0;padding:22px 0 26px}
 @media (max-width:820px){.meta{grid-template-columns:repeat(2,1fr)}}
@@ -77,13 +77,13 @@ button{font:inherit;cursor:pointer}
 .paren{color:var(--muted);font-style:italic;margin:-8px 0 22px}
 .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:0 0 8px}
 @media (max-width:520px){.cards{grid-template-columns:repeat(2,1fr)}}
-.card{background:var(--bg);color:var(--fg);border:2px solid var(--fg);padding:8px 8px 12px;text-align:center;display:flex;flex-direction:column;align-items:center;gap:4px;position:relative}
+.card{background:var(--paper);color:var(--ink);border:3px solid var(--paper);outline:2px solid var(--ink);outline-offset:-5px;padding:8px 8px 12px;text-align:center;display:flex;flex-direction:column;align-items:center;gap:4px;position:relative}
 .card:hover{border-color:var(--red)}
-.card img{display:block;width:100%;max-width:170px;height:auto;aspect-ratio:300/420;object-fit:contain;margin:4px auto 2px;pointer-events:none}
+.card .skel{display:block;width:100%;max-width:170px;height:auto;margin:4px auto 2px;pointer-events:none}
 .card .name{font:700 17px var(--type)}
-.card .role{font:400 13px var(--type);color:var(--muted)}
+.card .role{font:400 13px var(--type);color:#444}
 .card[disabled]{opacity:.3;cursor:default}
-.card[disabled]:hover{border-color:var(--fg)}
+.card[disabled]:hover{border-color:var(--paper)}
 .card.dead{border-color:var(--red)}
 .card.dead::after{content:"";position:absolute;inset:0;background:linear-gradient(to top right,transparent calc(50% - 2px),var(--red) calc(50% - 1px),var(--red) calc(50% + 1px),transparent calc(50% + 2px))}
 .cast-list{margin:22px 0 0;padding:0;list-style:none;font-family:var(--type);font-size:15px}
@@ -153,6 +153,55 @@ footer img{width:96px;height:auto}
 </style>
 </head>
 <body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><defs><pattern id="wdTone" width="6" height="6" patternUnits="userSpaceOnUse"><circle cx="3" cy="3" r="1.25" fill="#000"/></pattern><pattern id="wdToneL" width="7" height="7" patternUnits="userSpaceOnUse"><circle cx="3.5" cy="3.5" r=".8" fill="#000"/></pattern><pattern id="wdToneD" width="5" height="5" patternUnits="userSpaceOnUse"><rect width="5" height="5" fill="#000"/><circle cx="2.5" cy="2.5" r="1.1" fill="#FFF"/></pattern><pattern id="wdToneC" width="4" height="4" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r=".45" fill="#000"/></pattern><g id="wd-tom"><path d="M-4 19H4V25H-4Z" fill="#FFF" stroke="#000" stroke-width="1.2"/>
+<path d="M-30 46C-28 31-17 24 0 24S28 31 30 46Z" fill="#000" stroke="#000" stroke-width="1.6"/><path d="M-6 25V36M6 25V36" stroke="#FFF" stroke-width="1.2" stroke-linecap="round"/><path d="M0-21C-13-21-20-12-20-2C-20 6-16 10-12 12V17C-12 19-11 20-9 20H9C11 20 12 19 12 17V12C16 10 20 6 20-2C20-12 13-21 0-21Z" fill="#FFF" stroke="#000" stroke-width="1.5"/>
+<path d="M9-17C14-14 17-9 17-4" fill="none" stroke="#000" stroke-width=".6"/>
+<ellipse cx="-7.5" cy="0" rx="5.4" ry="6.2" fill="#000"/><ellipse cx="7.5" cy="0" rx="5.4" ry="6.2" fill="#000"/>
+<circle cx="-6.8" cy="-1" r="1.7" fill="#FFF"/><circle cx="8.2" cy="-1" r="1.7" fill="#FFF"/>
+<path d="M0 5L-2.8 10H2.8Z" fill="#000"/>
+<path d="M-6 20V15M-2 20V15M2 20V15M6 20V15" stroke="#000" stroke-width="1"/><path d="M-21-4L-27-17L-18-15L-21-29L-10-21L-6-34L1-23L8-34L11-22L21-29L19-15L27-15L21-3C19-14 10-20 0-20C-10-20-18-14-21-4Z" fill="#FFF" stroke="#000" stroke-width="1.5" stroke-linejoin="round"/>
+<path d="M-12-19L-15-25M-3-21L-4-29M6-21L7-29M14-18L17-24" stroke="#000" stroke-width=".7" stroke-linecap="round"/></g><g id="wd-marcus"><path d="M-4 19H4V25H-4Z" fill="#FFF" stroke="#000" stroke-width="1.2"/>
+<path d="M-30 46C-28 31-17 24 0 24S28 31 30 46Z" fill="#000" stroke="#000" stroke-width="1.6"/><path d="M-6 25V36M6 25V36" stroke="#FFF" stroke-width="1.2" stroke-linecap="round"/><path d="M0-21C-13-21-20-12-20-2C-20 6-16 10-12 12V17C-12 19-11 20-9 20H9C11 20 12 19 12 17V12C16 10 20 6 20-2C20-12 13-21 0-21Z" fill="#FFF" stroke="#000" stroke-width="1.5"/>
+<path d="M9-17C14-14 17-9 17-4" fill="none" stroke="#000" stroke-width=".6"/>
+<ellipse cx="-7.5" cy="0" rx="5.4" ry="6.2" fill="#000"/><ellipse cx="7.5" cy="0" rx="5.4" ry="6.2" fill="#000"/>
+<circle cx="-6.8" cy="-1" r="1.7" fill="#FFF"/><circle cx="8.2" cy="-1" r="1.7" fill="#FFF"/>
+<path d="M0 5L-2.8 10H2.8Z" fill="#000"/>
+<path d="M-6 20V15M-2 20V15M2 20V15M6 20V15" stroke="#000" stroke-width="1"/><path d="M-19-8V-38Q-19-42-15-42H15Q19-42 19-38V-8Q13-17 0-17T-19-8Z" fill="#000"/>
+<path d="M-12-36q2 2 0 4M-4-38q2 2 0 4M4-36q2 2 0 4M12-38q2 2 0 4M-8-28q2 2 0 4M0-30q2 2 0 4M8-28q2 2 0 4" stroke="#FFF" stroke-width=".7" fill="none" opacity=".7"/>
+<circle cx="-19" cy="6" r="1.5" fill="#FFF" stroke="#000" stroke-width=".8"/></g><g id="wd-raj"><path d="M-4 19H4V25H-4Z" fill="#FFF" stroke="#000" stroke-width="1.2"/>
+<path d="M-30 46C-28 31-17 24 0 24S28 31 30 46Z" fill="url(#wdToneD)" stroke="#000" stroke-width="1.6"/><path d="M0-21C-13-21-20-12-20-2C-20 6-16 10-12 12V17C-12 19-11 20-9 20H9C11 20 12 19 12 17V12C16 10 20 6 20-2C20-12 13-21 0-21Z" fill="#FFF" stroke="#000" stroke-width="1.5"/>
+<path d="M9-17C14-14 17-9 17-4" fill="none" stroke="#000" stroke-width=".6"/>
+<ellipse cx="-7.5" cy="0" rx="5.4" ry="6.2" fill="#000"/><ellipse cx="7.5" cy="0" rx="5.4" ry="6.2" fill="#000"/>
+<circle cx="-6.8" cy="-1" r="1.7" fill="#FFF"/><circle cx="8.2" cy="-1" r="1.7" fill="#FFF"/>
+<path d="M0 5L-2.8 10H2.8Z" fill="#000"/>
+<path d="M-6 20V15M-2 20V15M2 20V15M6 20V15" stroke="#000" stroke-width="1"/><path d="M-21-3C-25-22-10-32 5-31C19-30 25-20 21-5C18-13 12-17 6-15C9-20 4-23 -1-22C-7-15-15-14-21-3Z" fill="#000"/>
+<path d="M-4-28C4-31 12-29 17-24" stroke="#FFF" stroke-width=".9" fill="none" opacity=".6"/></g><g id="wd-ama"><path d="M-18 4C-22 14-20 24-23 30M18 4C22 14 20 24 23 30" fill="none" stroke="#000" stroke-width="2.2" stroke-linecap="round" stroke-dasharray="3 1.5"/><path d="M-4 19H4V25H-4Z" fill="#FFF" stroke="#000" stroke-width="1.2"/>
+<path d="M-30 46C-28 31-17 24 0 24S28 31 30 46Z" fill="#FFF" stroke="#000" stroke-width="1.6"/><path d="M0-21C-13-21-20-12-20-2C-20 6-16 10-12 12V17C-12 19-11 20-9 20H9C11 20 12 19 12 17V12C16 10 20 6 20-2C20-12 13-21 0-21Z" fill="#FFF" stroke="#000" stroke-width="1.5"/>
+<path d="M9-17C14-14 17-9 17-4" fill="none" stroke="#000" stroke-width=".6"/>
+<ellipse cx="-7.5" cy="0" rx="5.4" ry="6.2" fill="#000"/><ellipse cx="7.5" cy="0" rx="5.4" ry="6.2" fill="#000"/>
+<circle cx="-6.8" cy="-1" r="1.7" fill="#FFF"/><circle cx="8.2" cy="-1" r="1.7" fill="#FFF"/>
+<path d="M0 5L-2.8 10H2.8Z" fill="#000"/>
+<path d="M-6 20V15M-2 20V15M2 20V15M6 20V15" stroke="#000" stroke-width="1"/><g fill="#000"><circle cx="0" cy="-27" r="9"/><circle cx="-10" cy="-23" r="7"/><circle cx="10" cy="-23" r="7"/><circle cx="-6" cy="-34" r="6.5"/><circle cx="6" cy="-35" r="6.5"/><circle cx="0" cy="-41" r="5.5"/><circle cx="-15" cy="-15" r="5"/><circle cx="15" cy="-15" r="5"/></g>
+<path d="M-19-10C-17-17-10-20 0-20C10-20 17-17 19-10C14-14 8-16 0-16S-14-14-19-10Z" fill="#000"/>
+<g fill="none" stroke="#FFF" stroke-width=".7" opacity=".7"><path d="M-3-30a3 3 0 1 1 4 2M-12-24a2.5 2.5 0 1 1 3 2M8-25a2.5 2.5 0 1 1 3 2M-7-37a2 2 0 1 1 3 1M4-38a2 2 0 1 1 3 1"/></g>
+<circle cx="-20" cy="9" r="4.2" fill="none" stroke="#000" stroke-width="1.4"/><circle cx="20" cy="9" r="4.2" fill="none" stroke="#000" stroke-width="1.4"/></g><g id="wd-chloe"><path d="M-19-2C-22 8-21 18-24 26M19-2C22 8 21 18 24 26" fill="none" stroke="#000" stroke-width="1.2" stroke-linecap="round"/><path d="M-4 19H4V25H-4Z" fill="#FFF" stroke="#000" stroke-width="1.2"/>
+<path d="M-30 46C-28 31-17 24 0 24S28 31 30 46Z" fill="#000" stroke="#000" stroke-width="1.6"/><path d="M0-21C-13-21-20-12-20-2C-20 6-16 10-12 12V17C-12 19-11 20-9 20H9C11 20 12 19 12 17V12C16 10 20 6 20-2C20-12 13-21 0-21Z" fill="#FFF" stroke="#000" stroke-width="1.5"/>
+<path d="M9-17C14-14 17-9 17-4" fill="none" stroke="#000" stroke-width=".6"/>
+<ellipse cx="-7.5" cy="0" rx="5.4" ry="6.2" fill="#000"/><ellipse cx="7.5" cy="0" rx="5.4" ry="6.2" fill="#000"/>
+<circle cx="-6.8" cy="-1" r="1.7" fill="#FFF"/><circle cx="8.2" cy="-1" r="1.7" fill="#FFF"/>
+<path d="M0 5L-2.8 10H2.8Z" fill="#000"/>
+<path d="M-6 20V15M-2 20V15M2 20V15M6 20V15" stroke="#000" stroke-width="1"/><circle cx="2" cy="-29" r="9" fill="#FFF" stroke="#000" stroke-width="1.5"/><path d="M-4-31c3-4 9-4 12 0M-3-26c4 2 9 2 12-1" fill="none" stroke="#000" stroke-width=".7"/>
+<path d="M-20-4C-20-15-12-21 0-21C12-21 20-15 20-4C18-10 15-13 12-14L10-9L8-15C4-16 0-16-4-15L-6-8L-8-15C-13-13-17-10-20-4Z" fill="#FFF" stroke="#000" stroke-width="1.5" stroke-linejoin="round"/>
+<path d="M-12-17L-14-10M-2-19L-3-12M7-18L9-12" stroke="#000" stroke-width=".7"/>
+<path d="M6-37l3-5M-2-37l-3-5M10-33l5-2" stroke="#000" stroke-width=".9" stroke-linecap="round"/></g><g id="wd-mei"><path d="M-24-6C-24-25-14-31 0-31S24-25 24-6V24H-24Z" fill="#000"/><path d="M-4 19H4V25H-4Z" fill="#FFF" stroke="#000" stroke-width="1.2"/>
+<path d="M-30 46C-28 31-17 24 0 24S28 31 30 46Z" fill="url(#wdToneL)" stroke="#000" stroke-width="1.6"/><path d="M0-21C-13-21-20-12-20-2C-20 6-16 10-12 12V17C-12 19-11 20-9 20H9C11 20 12 19 12 17V12C16 10 20 6 20-2C20-12 13-21 0-21Z" fill="#FFF" stroke="#000" stroke-width="1.5"/>
+<path d="M9-17C14-14 17-9 17-4" fill="none" stroke="#000" stroke-width=".6"/>
+<ellipse cx="-7.5" cy="0" rx="5.4" ry="6.2" fill="#000"/><ellipse cx="7.5" cy="0" rx="5.4" ry="6.2" fill="#000"/>
+<circle cx="-6.8" cy="-1" r="1.7" fill="#FFF"/><circle cx="8.2" cy="-1" r="1.7" fill="#FFF"/>
+<path d="M0 5L-2.8 10H2.8Z" fill="#000"/>
+<path d="M-6 20V15M-2 20V15M2 20V15M6 20V15" stroke="#000" stroke-width="1"/><path d="M-21-5C-21-22-12-28 0-28S21-22 21-5H-21Z" fill="#000"/>
+<path d="M-15-5V-11M-8-5V-12M-1-5V-12M6-5V-12M13-5V-11" stroke="#FFF" stroke-width=".6" opacity=".55"/>
+<path d="M-6-25C2-28 10-27 15-23" stroke="#FFF" stroke-width=".9" fill="none" opacity=".6"/></g></defs></svg>
 <main>
 
 <!-- TITLE -->
@@ -295,7 +344,7 @@ footer img{width:96px;height:auto}
   <div class="method">
     <p>I picked 27 well-known horror films with Black characters in the main cast, 15 from before Get Out and 12 from after. For each one I read the plot summary on Wikipedia and logged who dies, in what order, and what happens to every Black main character. Villains and monsters aren't counted as victims. A character counts as Black if the actor is publicly identified as Black; where that wasn't clear, I left them out. Three films (Alien vs. Predator, Get Out and Candyman 2021) are left out of the "who died first" count because the first victim isn't clear from the source.</p>
     <p>This is a hand-picked set, not every horror film ever made, and the newer half leans towards Black-led films. That is part of the story, but it means the survival numbers describe these films, not the whole genre. The data is <a href="data/films.csv">here</a> and <a href="data/black_characters.csv">here</a> if you want to check my work.</p>
-    <p>The six actors in the game are made up. Actor photos come from Wikimedia Commons.</p>
+    <p>The six skeleton actors in the game are made up. Real actor photos come from Wikimedia Commons.</p>
     <p>Further reading: Robin R. Means Coleman, <i>Horror Noire: Blacks in American Horror Films from the 1890s to Present</i> (2011), and the 2019 documentary of the same name.</p>
   </div>
   </div>
@@ -345,7 +394,7 @@ const TIMELINE = [
 
 /* ---------- avatar drawing ---------- */
 function avatar(a){
-  return `<img src="assets/cast/${a.id}.png" alt="${a.name}" width="300" height="420" loading="eager" draggable="false">`;
+  return `<svg class="skel" viewBox="-38 -50 76 98" role="img" aria-label="${a.name}"><rect x="-38" y="-50" width="76" height="98" fill="url(#wdToneC)" opacity=".5"/><use href="#wd-${a.id}"/></svg>`;
 }
 
 /* ---------- state ---------- */

@@ -109,7 +109,6 @@ black-horror-1968-2025/
 │   ├── films.csv               # One row per film, with its first named victim
 │   └── black_characters.csv    # One row per Black main character, with their fate
 ├── assets/
-│   ├── cast/                   # The six character portraits
 │   ├── fonts/                  # Self-hosted fonts and their licences
 │   └── logo.png                # My logo
 ├── screenshot_title.png        # Title screen
